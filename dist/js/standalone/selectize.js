@@ -618,7 +618,7 @@
 }));
 
 /**
- * selectize.js (v0.12.1)
+ * selectize.js (v1.0.0)
  * Copyright (c) 2013–2015 Brian Reavis & contributors
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
@@ -3374,7 +3374,7 @@
 	
 			$children = $input.children();
 			for (i = 0, n = $children.length; i < n; i++) {
-				tagName = $children[i].tagName.turkishToLower();
+				tagName = $children[i].tagName.toLocaleLowerCase();
 				if (tagName === 'optgroup') {
 					addGroup($children[i]);
 				} else if (tagName === 'option') {
@@ -3388,7 +3388,7 @@
 	
 			var instance;
 			var $input = $(this);
-			var tag_name = this.tagName.turkishToLower();
+			var tag_name = this.tagName.toLocaleLowerCase();
 			var placeholder = $input.attr('placeholder') || $input.attr('data-placeholder');
 			if (!placeholder && !settings.allowEmptyOption) {
 				placeholder = $input.children('option[value=""]').text();

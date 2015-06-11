@@ -1,5 +1,5 @@
 {
-  "name": "selectize",
+  "name": "selectize-burak",
   "keywords": [
     "select",
     "ui",
@@ -11,12 +11,12 @@
     "tag"
   ],
   "main": "dist/js/selectize.js",
-  "description": "Selectize is a jQuery-based custom <select> UI control. Useful for tagging, contact lists, country selectors, etc.",
-  "version": "0.12.1",
-  "author": "Brian Reavis <brian@thirdroute.com>",
+  "description": "A customized selectize.js library.",
+  "version": "1.0.0",
+  "author": "Burak Çalık <burak@macellan.net>",
   "repository": {
     "type": "git",
-    "url": "git://github.com/brianreavis/selectize.js.git"
+    "url": "git://github.com/bcalik/selectize.js.git"
   },
   "dependencies": {
     "microplugin": "0.0.3",
