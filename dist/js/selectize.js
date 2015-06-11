@@ -1,5 +1,5 @@
 /**
- * selectize.js (v1.0.0)
+ * selectize.js (v1.0.1)
  * Copyright (c) 2013–2015 Brian Reavis & contributors
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
@@ -738,7 +738,7 @@
 					return '<div class="item">' + escape(data[field_label]) + '</div>';
 				},
 				'option_create': function(data, escape) {
-					return '<div class="create">Add <strong>' + escape(data.input) + '</strong>&hellip;</div>';
+					return '<div class="create">Yeni Kayıt: <strong>' + escape(data.input) + '</strong>&hellip;</div>';
 				}
 			};
 	

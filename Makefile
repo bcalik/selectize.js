@@ -6,7 +6,7 @@ all: compile
 test:
 	npm test
 compile:
-	$(GRUNT) --plugins=$(plugins)
+	$(GRUNT) --plugins=* --force
 release:
 ifeq ($(strip $(version)),)
 	@echo "\033[31mERROR:\033[0;39m No version provided."
