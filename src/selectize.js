@@ -14,7 +14,7 @@ var Selectize = function($input, settings) {
 		settings         : settings,
 		$input           : $input,
 		tabIndex         : $input.attr('tabindex') || '',
-		tagType          : input.tagName.toLowerCase() === 'select' ? TAG_SELECT : TAG_INPUT,
+		tagType          : input.tagName.turkishToLower() === 'select' ? TAG_SELECT : TAG_INPUT,
 		rtl              : /rtl/i.test(dir),
 
 		eventNS          : '.selectize' + (++Selectize.count),
@@ -801,7 +801,7 @@ $.extend(Selectize.prototype, {
 		}
 
 		// modify selection
-		eventName = e && e.type.toLowerCase();
+		eventName = e && e.type.turkishToLower();
 
 		if (eventName === 'mousedown' && self.isShiftDown && self.$activeItems.length) {
 			$last = self.$control.children('.active:last');

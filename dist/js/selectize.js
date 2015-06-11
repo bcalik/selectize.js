@@ -400,7 +400,7 @@
 			if (!options.force && $input.data('grow') === false) return;
 	
 			value = $input.val();
-			if (e.type && e.type.toLowerCase() === 'keydown') {
+			if (e.type && e.type.turkishToLower() === 'keydown') {
 				keyCode = e.keyCode;
 				printable = (
 					(keyCode >= 97 && keyCode <= 122) || // a-z
@@ -422,8 +422,8 @@
 				} else if (printable) {
 					shift = e.shiftKey;
 					character = String.fromCharCode(e.keyCode);
-					if (shift) character = character.toUpperCase();
-					else character = character.toLowerCase();
+					if (shift) character = character.toLocaleUpperCase();
+					else character = character.turkishToLower();
 					value += character;
 				}
 			}
@@ -461,7 +461,7 @@
 			settings         : settings,
 			$input           : $input,
 			tabIndex         : $input.attr('tabindex') || '',
-			tagType          : input.tagName.toLowerCase() === 'select' ? TAG_SELECT : TAG_INPUT,
+			tagType          : input.tagName.turkishToLower() === 'select' ? TAG_SELECT : TAG_INPUT,
 			rtl              : /rtl/i.test(dir),
 	
 			eventNS          : '.selectize' + (++Selectize.count),
@@ -1248,7 +1248,7 @@
 			}
 	
 			// modify selection
-			eventName = e && e.type.toLowerCase();
+			eventName = e && e.type.turkishToLower();
 	
 			if (eventName === 'mousedown' && self.isShiftDown && self.$activeItems.length) {
 				$last = self.$control.children('.active:last');
@@ -2755,7 +2755,7 @@
 	
 			$children = $input.children();
 			for (i = 0, n = $children.length; i < n; i++) {
-				tagName = $children[i].tagName.toLowerCase();
+				tagName = $children[i].tagName.turkishToLower();
 				if (tagName === 'optgroup') {
 					addGroup($children[i]);
 				} else if (tagName === 'option') {
@@ -2769,7 +2769,7 @@
 	
 			var instance;
 			var $input = $(this);
-			var tag_name = this.tagName.toLowerCase();
+			var tag_name = this.tagName.turkishToLower();
 			var placeholder = $input.attr('placeholder') || $input.attr('data-placeholder');
 			if (!placeholder && !settings.allowEmptyOption) {
 				placeholder = $input.children('option[value=""]').text();

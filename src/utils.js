@@ -280,7 +280,7 @@ var autoGrow = function($input) {
 		if (!options.force && $input.data('grow') === false) return;
 
 		value = $input.val();
-		if (e.type && e.type.toLowerCase() === 'keydown') {
+		if (e.type && e.type.turkishToLower() === 'keydown') {
 			keyCode = e.keyCode;
 			printable = (
 				(keyCode >= 97 && keyCode <= 122) || // a-z
@@ -302,8 +302,8 @@ var autoGrow = function($input) {
 			} else if (printable) {
 				shift = e.shiftKey;
 				character = String.fromCharCode(e.keyCode);
-				if (shift) character = character.toUpperCase();
-				else character = character.toLowerCase();
+				if (shift) character = character.toLocaleUpperCase();
+				else character = character.turkishToLower();
 				value += character;
 			}
 		}

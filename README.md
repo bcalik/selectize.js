@@ -3,4 +3,5 @@ Please check the original repo for documentation.
 
 This fork contains some custom features:
 - **selectOnComma option**  
-  Set this option true if you want the comma key to behave like return key.
+  Set this option true if you want the comma key to behave like return key.  
+- **Turkish language support**  
