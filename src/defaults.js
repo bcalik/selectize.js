@@ -18,6 +18,7 @@ Selectize.defaults = {
 	hideSelected: null,
 	addPrecedence: false,
 	selectOnTab: false,
+	selectOnComma: false,
 	preload: false,
 	allowEmptyOption: false,
 	closeAfterSelect: false,

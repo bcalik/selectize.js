@@ -486,6 +486,10 @@ $.extend(Selectize.prototype, {
 				}
 				e.preventDefault();
 				return;
+			case KEY_COMMA:
+				if (!self.settings.selectOnComma) {
+					return;
+				}
 			case KEY_RETURN:
 				if (self.isOpen && self.$activeOption) {
 					self.onOptionSelect({currentTarget: self.$activeOption});

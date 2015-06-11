@@ -406,7 +406,8 @@
 					(keyCode >= 97 && keyCode <= 122) || // a-z
 					(keyCode >= 65 && keyCode <= 90)  || // A-Z
 					(keyCode >= 48 && keyCode <= 57)  || // 0-9
-					keyCode === 32 // space
+					keyCode === 32 || // space
+					keyCode === 188   // comma
 				);
 	
 				if (keyCode === KEY_DELETE || keyCode === KEY_BACKSPACE) {
@@ -932,6 +933,10 @@
 					}
 					e.preventDefault();
 					return;
+				case KEY_COMMA:
+					if (!self.settings.selectOnComma) {
+						return;
+					}
 				case KEY_RETURN:
 					if (self.isOpen && self.$activeOption) {
 						self.onOptionSelect({currentTarget: self.$activeOption});
@@ -2568,6 +2573,7 @@
 		hideSelected: null,
 		addPrecedence: false,
 		selectOnTab: false,
+		selectOnComma: false,
 		preload: false,
 		allowEmptyOption: false,
 		closeAfterSelect: false,
